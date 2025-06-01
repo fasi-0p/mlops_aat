@@ -1,5 +1,36 @@
 # End-to-End-Kidney-Diesease-Classification-Project
 
+This project implements a complete, production-ready deep learning pipeline for automated kidney disease classification from medical CT scan images. It follows best practices in MLOps, including modular code, experiment tracking, data versioning, and CI/CD deployment.
+
+## Key Features
+
+- **Data Ingestion & Preprocessing:**  
+  Downloads and extracts kidney CT scan datasets from Google Drive, organizes them for model training, and logs the process for reproducibility.
+
+- **Model Building:**  
+  Utilizes transfer learning with state-of-the-art architectures (e.g., VGG16) using TensorFlow/Keras. The base model is prepared and fine-tuned for the kidney disease classification task.
+
+- **Training Pipeline:**  
+  Trains the deep learning model on the ingested dataset, with configurable hyperparameters and robust logging. Model checkpoints and training artifacts are saved for further evaluation and deployment.
+
+- **Model Evaluation:**  
+  Evaluates the trained model on validation/test data, computes key metrics (accuracy, loss, etc.), and logs results. Integrates with MLflow for experiment tracking and model registry.
+
+- **Experiment Tracking:**  
+  Uses [MLflow](https://mlflow.org/) (with [DagsHub](https://dagshub.com/) integration) to track experiments, parameters, metrics, and model versions.
+
+- **Data & Model Versioning:**  
+  Employs [DVC](https://dvc.org/) for data and model version control, ensuring reproducibility and traceability of datasets and model artifacts.
+
+- **Web Application:**  
+  Provides a user-friendly web interface (Flask-based) for uploading images and obtaining real-time predictions from the trained model.
+
+- **Dockerized Deployment:**  
+  Includes a Dockerfile for containerized deployment, making it easy to run the application in any environment.
+
+- **CI/CD Pipeline:**  
+  GitHub Actions workflows for automated testing, building, and deployment. Supports AWS EC2 and ECR for scalable cloud deployment.
+
 ## How to run?
 ### STEPS:
 
